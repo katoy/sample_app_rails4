@@ -17,6 +17,14 @@ group :development, :test do
   # gem 'spork-rails', '~>4.0.0'
   # gem 'guard-spork', '~>1.5.0'
   # gem 'childprocess', '~>0.3.6'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'pry-rails'
+  gem 'pry-debugger'
+  gem 'pry-coolline'
+  gem 'pry-doc'
+  gem 'awesome_print'
+  gem 'hirb'
 end
 
 group :test do
