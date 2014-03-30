@@ -4,14 +4,14 @@ ruby '2.1.1'
 
 gem 'rails', '~>4.0.4'
 gem 'bootstrap-sass', '~>2.3.2.0'
-gem 'bcrypt-ruby', '>=3.1.2'
+gem 'bcrypt-ruby'
 gem 'faker'
 gem 'faker-japanese'
 gem 'will_paginate', '>=3.0.4'
 gem 'bootstrap-will_paginate', '>=0.0.9'
 
 group :development, :test do
-  gem 'sqlite3', '>=1.3.8'
+  gem 'sqlite3'
   gem 'rspec-rails', '>=2.14.1'
   # The following optional lines are part of the advanced setup.
   gem 'guard-rspec', '>=2.5.0'
