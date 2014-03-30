@@ -1,3 +1,6 @@
+
+[![Dependency Status](https://gemnasium.com/katoy/sample_app_rails4.svg)](https://gemnasium.com/katoy/sample_app_rails4)
+
 # Ruby on Rails チュートリアル：サンプルアプリケーション
 
 これは、以下のためのサンプルアプリケーションです。
