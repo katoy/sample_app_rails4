@@ -1,32 +1,32 @@
 require 'spec_helper'
 
-describe "Authentication" do
+describe 'Authentication' do
 
   subject { page }
 
-  describe "signin page" do
+  describe 'signin page' do
     before { visit signin_path }
 
     it { should have_content('Sign in') }
     it { should have_title('Sign in') }
   end
 
-  describe "signin" do
+  describe 'signin' do
     before { visit signin_path }
 
-    describe "with invalid information" do
-      before { click_button "Sign in" }
+    describe 'with invalid information' do
+      before { click_button 'Sign in' }
 
       it { should have_title('Sign in') }
       it { should have_error_message('Invalid') }
 
-      describe "after visiting another page" do
-        before { click_link "Home" }
+      describe 'after visiting another page' do
+        before { click_link 'Home' }
         it { should_not have_selector('div.alert.alert-error') }
       end
     end
 
-    describe "with valid information" do
+    describe 'with valid information' do
       let(:user) { FactoryGirl.create(:user) }
       before { sign_in user }
 
@@ -37,8 +37,8 @@ describe "Authentication" do
       it { should have_link('Sign out', href: signout_path) }
       it { should_not have_link('Sign in', href: signin_path) }
 
-      describe "followed by signout" do
-        before { click_link "Sign out" }
+      describe 'followed by signout' do
+        before { click_link 'Sign out' }
         it { should have_link('Sign in') }
       end
     end
@@ -49,7 +49,7 @@ describe "Authentication" do
     describe 'for non-signed-in users' do
       let(:user) { FactoryGirl.create(:user) }
 
-      describe "when attempting to visit a protected page" do
+      describe 'when attempting to visit a protected page' do
         before do
           visit edit_user_path(user)
           fill_in 'Email',    with: user.email
@@ -63,16 +63,16 @@ describe "Authentication" do
             expect(page).to have_title('Edit user')
           end
 
-          describe "when signing in again" do
+          describe 'when signing in again' do
             before do
               delete signout_path
               visit signin_path
-              fill_in "Email",    with: user.email
-              fill_in "Password", with: user.password
-              click_button "Sign in"
+              fill_in 'Email',    with: user.email
+              fill_in 'Password', with: user.password
+              click_button 'Sign in'
             end
 
-            it "should render the default (profile) page" do
+            it 'should render the default (profile) page' do
               expect(page).to have_title(user.name)
             end
           end
@@ -94,6 +94,19 @@ describe "Authentication" do
         describe 'visiting the user index' do
           before { visit users_path }
           it { should have_title('Sign in') }
+        end
+      end
+
+      describe 'in the Microposts controller' do
+
+        describe 'submitting to the create action' do
+          before { post microposts_path }
+          specify { expect(response).to redirect_to(signin_path) }
+        end
+
+        describe 'submitting to the destroy action' do
+          before { delete micropost_path(FactoryGirl.create(:micropost)) }
+          specify { expect(response).to redirect_to(signin_path) }
         end
       end
     end
