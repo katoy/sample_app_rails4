@@ -35,6 +35,10 @@ group :test do
   gem 'cucumber-rails', '>=1.4.0', require: false
   gem 'database_cleaner', github: 'bmabey/database_cleaner'
 
+  gem 'simplecov', :require => false
+  gem 'simplecov-rcov', :require => false
+  gem 'coveralls', require: false
+
   # Uncomment this line on OS X.
   # gem 'growl', '>=1.0.3'
 
