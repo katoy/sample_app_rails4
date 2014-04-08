@@ -26,6 +26,7 @@ group :development, :test do
   gem 'pry-doc'
   gem 'awesome_print'
   gem 'hirb'
+  gem 'rubocop'
 end
 
 group :test do

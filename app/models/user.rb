@@ -26,7 +26,7 @@ class User < ActiveRecord::Base
   def feed
     Micropost.from_users_followed_by(self)
   end
-  
+
   def self.new_remember_token
     SecureRandom.urlsafe_base64
   end
