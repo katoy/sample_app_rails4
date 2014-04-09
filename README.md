@@ -15,31 +15,68 @@ by [Michael Hartl](http://michaelhartl.com/).
 3. coverage 計測
 4. github 上での  travis, gemnasium, coveralls  サービス用の設定
 
-1. rubocop
---------
+1. rubocop, siblimelinter
+---------------------------
+
 sublimetext3 で rubocop との連携を設定しておくと、コード編集しながら  rubocop  によるチェックを行うことができます。  
+[https://github.com/pderichs/sublime_rubocop](https://github.com/pderichs/sublime_rubocop)  
+  
+もちろん、コマンドラインから、
+
+    $ rubocop
+
+ として起動することも可能です。
+
+ .rubocop  -- チェック内容を設定するファイル。  
+
+     ＄ rubocop --auto-gen-config
+
+  を実行すると、警告が０になるような設定ファイルが rubocop-todo.yml として生成されます。  
+  これをベースにして .rubocop,yml を作ると良いです。  
+
+sublimelinter という プラグインを私は使っています。
+
+sublimetext の設定については、以下が参考になります。  
+[SublimeText3でRubyをコーディングする際の最低限のインストール＆設定](http://tigawa.github.io/blog/2014/03/09/st3-win-ruby/)
 
 
 2. guard
 -------
+
 guard コマンドを起動しておくと、ファイルを保存する度に、 rake spec が走ります。  
+Guardfile が設定ファイルです。  
 
 3. coverage 
 ----------
+
+rspec が走ったときに、テストかバレーッジレポートが covereage/ 以下に生成されます。  
+macos なら
+
+    $ open coverage/rcov/index.html
+
+ とすることで、 web browser が起動し、 カバレッジレポートを閲覧できます。
 
 
 4. travis, gemnasium, coveralls
 -------------------------------
 
+.travis.yml     travis の設定ファイル  
+
+.coveralls.yml  coverrails の設定ファイル  
+
+この README.md の先頭に表示されているツールのバッジをクリックすることでgithub 用の各種サービスのレポート結果を参照できます。  
 
 
 5. md ファイル (README.md) の編集
 --------------------------------
 
+[Sublime Text で GitHub Flavored Markdown をプレビューする](http://rarihoma.s601.xrea.com/post-2013-11-23-01)  
+に従って設定すると、macos なら cmd + Shift + g で ブラウザが開いて、 preview できます。
+
 
 TODO:  
 -----
-- 認証を devise に置き換える。
-- casperjs をつかったテストスクリプトの作成
-- bootstrap3 を使うようにすること
+- 認証を devise に置き換える事。
+- casperjs をつかったテストスクリプトを作成する事。
+- bootstrap3 を使うようにする事。
 - yard 用のコメントを書く事。
