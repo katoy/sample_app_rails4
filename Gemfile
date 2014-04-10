@@ -27,6 +27,8 @@ group :development, :test do
   gem 'awesome_print'
   gem 'hirb'
   gem 'rubocop'
+
+  gem 'metric_fu'
 end
 
 group :test do
