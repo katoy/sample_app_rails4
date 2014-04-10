@@ -13,7 +13,7 @@
 　　3. coverage 計測  
 　　4. github 上での  travis, gemnasium, coveralls  サービス用の設定  
 
-1. rubocop, siblimelinter
+1. rubocop, sublimelinter
 ---------------------------
 
 sublimetext3 で rubocop との連携を設定しておくと、コード編集しながら  rubocop  によるチェックを行うことができます。  
