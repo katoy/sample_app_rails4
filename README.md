@@ -96,3 +96,5 @@ macos なら
 - bootstrap3 を使うようにする事。
 - yard 用のコメントを書く事。
 - i18n 対応する事。
+- kaminari をつかって paging する事。あるいは twitter のような paging にする事。
+
