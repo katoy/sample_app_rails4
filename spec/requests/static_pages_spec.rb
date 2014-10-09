@@ -1,12 +1,12 @@
 require 'spec_helper'
 
-describe 'Static pages' do
+describe 'Static pages', :type => :request do
 
   subject { page }
 
   shared_examples_for 'all static pages' do
-    it { should have_content(heading) }
-    it { should have_title(full_title(page_title)) }
+    it { is_expected.to have_content(heading) }
+    it { is_expected.to have_title(full_title(page_title)) }
   end
 
   describe 'Home page' do
@@ -15,7 +15,7 @@ describe 'Static pages' do
     let(:page_title) { '' }
 
     it_should_behave_like 'all static pages'
-    it { should_not have_title('| Home') }
+    it { is_expected.not_to have_title('| Home') }
 
     describe "for signed-in users" do
       let(:user) { FactoryGirl.create(:user) }
@@ -39,8 +39,8 @@ describe 'Static pages' do
           visit root_path
         end
 
-        it { should have_link('0 following', href: following_user_path(user)) }
-        it { should have_link('1 followers', href: followers_user_path(user)) }
+        it { is_expected.to have_link('0 following', href: following_user_path(user)) }
+        it { is_expected.to have_link('1 followers', href: followers_user_path(user)) }
       end
     end
   end

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'MicropostPages' do
+describe 'MicropostPages', :type => :request do
 
   subject { page }
 
@@ -18,7 +18,7 @@ describe 'MicropostPages' do
 
       describe 'error messages' do
         before { click_button 'Post' }
-        it { should have_content('error') }
+        it { is_expected.to have_content('error') }
       end
     end
 
