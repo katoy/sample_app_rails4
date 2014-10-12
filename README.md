@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/katoy/sample_app_rails4.svg?branch=master)](https://travis-ci.org/katoy/sample_app_rails4)
 [![Dependency Status](https://gemnasium.com/katoy/sample_app_rails4.svg)](https://gemnasium.com/katoy/sample_app_rails4)
 [![Coverage Status](https://coveralls.io/repos/katoy/sample_app_rails4/badge.png)](https://coveralls.io/r/katoy/sample_app_rails4)
-![Inline docs](http://inch-ci.org/github/katoy/sample_app_rails4.svg?branch=master)](http://inch-ci.org/github/katoy/sample_app_rails4)
+[![Inline docs](http://inch-ci.org/github/katoy/sample_app_rails4.svg?branch=master)](http://inch-ci.org/github/katoy/sample_app_rails4)
 
 # Ruby on Rails チュートリアル：サンプルアプリケーション
 
