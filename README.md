@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/katoy/sample_app_rails4.svg?branch=master)](https://travis-ci.org/katoy/sample_app_rails4)
 [![Dependency Status](https://gemnasium.com/katoy/sample_app_rails4.svg)](https://gemnasium.com/katoy/sample_app_rails4)
 [![Coverage Status](https://coveralls.io/repos/katoy/sample_app_rails4/badge.png)](https://coveralls.io/r/katoy/sample_app_rails4)
+![Inline docs](http://inch-ci.org/github/katoy/sample_app_rails4.svg?branch=master)](http://inch-ci.org/github/katoy/sample_app_rails4)
 
 # Ruby on Rails チュートリアル：サンプルアプリケーション
 
@@ -89,7 +90,13 @@ macos なら
  で、コードの静的解析結果のレポートを閲覧できます。
  
 
-## TODO:  
+## Topic:
+
+rspec を 2.* から 3.* に versionup した。  
+その際に [transcript](https://github.com/yujinakayama/transpec](https://github.com/yujinakayama/transpec))をつかって sepc/* のファイルを自動変換させた。  
+See [Ruby on Rails チュートリアル　実例を使ってRailsを学ぼう 第五章 5.3.2からエラーが出ます](https://teratail.com/questions/2813)  
+
+## TODO:
 
 - 認証を devise に置き換える事。
 - casperjs をつかったテストスクリプトを作成する事。
