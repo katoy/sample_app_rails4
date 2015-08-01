@@ -30,6 +30,9 @@ group :development, :test do
   gem 'rubocop'
 
   gem 'metric_fu'
+
+  gem 'rack-mini-profiler'
+  gem 'flamegraph'
 end
 
 group :test do
